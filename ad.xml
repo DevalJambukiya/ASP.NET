@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<h1>Tum Jis Rah Par Chal Rahe ho beta....</h1>
+		<ImageUrl>1.jpg</ImageUrl>
+		<Keyword>Amit</Keyword>
+		<NavigateUrl>www.google.com</NavigateUrl>
+		<AlternateText>Gandhi</AlternateText>
+		<Impression>3</Impression>
+	</Ad>
+	
+</Advertisements>
