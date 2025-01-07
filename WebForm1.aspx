@@ -10,8 +10,10 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/ad.xml" />
+        <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/ad.xml" Height="100px" Width="100px" />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </form>
 </body>
 </html>
