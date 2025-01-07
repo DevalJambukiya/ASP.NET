@@ -17,25 +17,25 @@ namespace b_lecture
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //if (FileUpload1.HasFile)
-            //{
-            //    try
-            //    {
-            //        string filename = FileUpload1.FileName;
-            //        string path = Server.MapPath("~/FILES/") + filename;
+            if (FileUpload1.HasFile)
+            {
+                try
+                {
+                    string filename = FileUpload1.FileName;
+                    string path = Server.MapPath("~/FILES/") + filename;
 
-            //        // Save the file
-            //        FileUpload1.SaveAs(path);
+                    // Save the file
+                    FileUpload1.SaveAs(path);
 
-            //        // Display success message
-            //        Label1.Text = "File Uploaded Successfully!";
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        // Display an error message
-            //        Label1.Text = "Error: " + ex.Message;
-            //    }
-            //}
+                    // Display success message
+                    Label1.Text = "File Uploaded Successfully!";
+                }
+                catch (Exception ex)
+                {
+                    // Display an error message
+                    Label1.Text = "Error: " + ex.Message;
+                }
+            }
            
         }
     }
