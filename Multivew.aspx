@@ -5,8 +5,58 @@
 <head runat="server">
     <title>MultiView Example</title>
     <style type="text/css">
-        #Select1 {
-            width: 83px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            width: 48%;
+        }
+        .summary {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -16,45 +66,51 @@
             <!-- View 1: Student Information -->
             <asp:View ID="view1" runat="server">
                 <h3>STUDENT INFORMATION</h3>
-                Name:
-                <asp:TextBox ID="TextBox1" runat="server" Height="31px" Width="145px"></asp:TextBox>
-                <br />
-                Gender:
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="100px">
+                <label for="TextBox1">Name:<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BorderColor="#333300" ControlToValidate="TextBox1" ErrorMessage="Enter Name" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                </label>
+                <asp:TextBox ID="TextBox1" runat="server" />
+
+                <label for="DropDownList1">Gender:</label>
+                <asp:DropDownList ID="DropDownList1" runat="server">
                     <asp:ListItem Text="Select" Value="" />
                     <asp:ListItem Text="Male" Value="Male" />
                     <asp:ListItem Text="Female" Value="Female" />
                 </asp:DropDownList>
-                <br />
-                Address:
-                <asp:TextBox ID="TextBox2" runat="server" Height="33px" TextMode="MultiLine"></asp:TextBox>
-                <br />
-                Degree:
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                <br /><br />
+
+                <label for="TextBox2">Address:</label>
+                <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine" />
+
+                <label for="TextBox3">Degree:</label>
+                <asp:TextBox ID="TextBox3" runat="server" />
+
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Next" />
             </asp:View>
 
             <!-- View 2: Contact Information -->
             <asp:View ID="view2" runat="server">
                 <h3>CONTACT INFORMATION</h3>
-                Email:
-                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                <br />
-                Contact No:
-                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                <br /><br />
-                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Next" />
-                <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Previous" />
+                <label for="TextBox4">Email:</label>
+                <asp:TextBox ID="TextBox4" runat="server" />
+
+                <label for="TextBox5">Contact No:</label>
+                <asp:TextBox ID="TextBox5" runat="server" />
+
+                <div class="buttons">
+                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Previous" />
+                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Next" />
+                </div>
             </asp:View>
 
             <!-- View 3: Summary -->
             <asp:View ID="view3" runat="server">
                 <h3>SUMMARY</h3>
-                <asp:Label ID="LabelSummary" runat="server" Text=""></asp:Label>
-                <br /><br />
-                <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Previous" />
-                <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="OK" />
+                <div class="summary">
+                    <asp:Label ID="LabelSummary" runat="server" Text="" />
+                </div>
+                <div class="buttons">
+                    <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Previous" />
+                    <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="OK" />
+                </div>
             </asp:View>
         </asp:MultiView>
     </form>

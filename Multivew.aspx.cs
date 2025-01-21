@@ -44,8 +44,7 @@ namespace b_lecture
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            // Navigate back to View1
-            MultiView1.SetActiveView(view1);
+            MultiView1.ActiveViewIndex = 0; // Navigate to View 1
         }
 
         protected void Button5_Click(object sender, EventArgs e)

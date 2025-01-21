@@ -73,6 +73,7 @@
     <Content Include="1.jpg" />
     <Content Include="WebForm2.aspx" />
     <Content Include="Multivew.aspx" />
+    <Content Include="WebForm5.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="Multivew.aspx.designer.cs">
       <DependentUpon>Multivew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
